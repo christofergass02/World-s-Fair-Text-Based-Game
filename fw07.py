@@ -2,30 +2,44 @@
 from sys import exit
 import time
 import random
-#total = 240 (time in minutes)
+#total = 360 (time in minutes)
 gold = 3.25
 
 # choices: [yes, no], [left, right]
+positive = ['YES', 'Yes', 'yes', 'yep', 'yeah', 'Y', 'y']
+negative = ['NO', 'No', 'no', 'nah', 'N', 'n']
+left = ['LEFT', 'Left', 'left', 'L', 'l']
+right = ['RIGHT', 'Right', 'right', 'R', 'r']
 
-# ['YES', 'Yes', 'yes', 'yeah', 'Y', 'y']
-# ['NO', 'No', 'no', 'nah', 'N', 'n']
-# ['LEFT', 'Left', 'left', 'L', 'l']
-# ['RIGHT', 'Right', 'right', 'R', 'r']
+
+#() Money
+def pay(price):
+    global gold
+    gold = gold - price
+    if gold <= 0:
+        broke()
+    else: 
+        print("\nYou now have ", gold)
+        time.sleep(3)
+
+#() No money
+def broke():
+    print("It looks like you are out of money to go on.\nI hope you enjoyed your day at the 1964-1965 World's Fair!")
+    exit()
+
 
 #(2) African Pavilion
 def african_pav(): 
 #    time = 45
-    global gold
     print("As you come up to the entrance of the pavilion\nyou are asked to pay 50 cents.")
     afria()
 def afria():
+    global gold
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.50  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.50)
         afrib()
-    elif choice == "no":
+    elif choice in negative:
         print("Alright, let's go to THE UNISPHERE.")
         unisphere()
     else:
@@ -40,10 +54,10 @@ def afrib():
     afri1()
 def afri1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE NEW JERSEY PAVILION.")
         nj_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE UNISPHERE.")
         unisphere()
     else:
@@ -59,10 +73,10 @@ def alaska_pav():
     al1()
 def al1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left": 
+    if choice in left: 
         print("\nYOU ARE AT THE MISSOURI PAVILION.")
         missouri_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE WISCONSIN PAVILION.")
         wisconsin_pav()
     else:
@@ -72,20 +86,18 @@ def al1():
 #(6) American Indian Pavilion
 def amind_pav():
 #   time = 30
-    global gold
     print("As you come up to the entrance of the pavilion\nyou are asked to pay 50 cents.")
     aminda()
 def aminda():
+    global gold
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.50  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.50)  
             
             
             
         amind1()
-    elif choice == "no":
+    elif choice in negative:
         print("After you see the time on the Communications Arch near you\nyou realize that it is time to go home for dinner.")
         print("I hope you enjoyed the 1964-1965 World's Fair. Goodbye.")
         time.sleep(5)
@@ -98,10 +110,10 @@ def amind1():
     print("Where would you like to go to next?")
     print("To the left is WALTER'S INTERNATIONAL WAX MUSEUM\nand to the right is THE CHUNG KING INN.")
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left": 
+    if choice in left:
         print("\nYOU ARE AT WALTER'S INTERNATIONAL WAX MUSEUM.")
         walters_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE CHUNG KING INN.")
         cki_pav()
     else:
@@ -111,17 +123,14 @@ def amind1():
 #(8) American-Israel Pavilion
 def americanisrael_pav():
 #    time = 25
-    global gold
     print("As you come up to the entrance of the pavilion\nyou are asked to pay 25 cents.")
     amera()
 def amera():
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.25  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.25)  
         amerb()
-    elif choice == "no":
+    elif choice in negative:
         print("Alright, let's go to THE MISSOURI PAVILION.")
         missouri_pav()
     else:
@@ -134,10 +143,10 @@ def amerb():
     amer1()
 def amer1():    
     choice = input("Which way do you go?\nleft or right?\n ")    
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE HALL OF FREE ENTERPRISE PAVILION")
         hall_pav()   
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE SWITZERLAND PAVILION")
         switzerland_pav()
     else:
@@ -153,10 +162,10 @@ def astral_foun():
     ast1()
 def ast1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE AMERICAN INDIAN PAVILION.")
         amind_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE CONTINENTAL CIRCUS.")
         circus_pav()
     else:
@@ -171,10 +180,10 @@ def austria_pav():
     aus1()
 def aus1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE JAPNA PAVILION.")
         japan_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE ROCKET THROWER SCULPTURE.")
         rocket()
     else:
@@ -184,17 +193,15 @@ def aus1():
 #(14) Belgium Pavilion
 def belgium_pav():
 #    time = 60
-    global gold
     print("As you come up to the entrance of the pavilion\nyou are asked to pay 60 cents.")
     bela()
 def bela():
+    global gold
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.60  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.60)    
         belb()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, lets go to THE VATICAN PAVILION.")
         vatican_pav()
     else:
@@ -209,10 +216,10 @@ def belb():
     bel1()
 def bel1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE LOUISIANNA PAVILION")
         louisiana_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE VATICAN PAVILION")
         vatican_pav()
     else:
@@ -229,10 +236,10 @@ def christianscience_pav():
     chris1()
 def chris1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE HALL OF FREE ENTERPRISE PAVILION.")
         hall_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE SWITZERLAND PAVILION.")
         switzerland_pav()
     else:
@@ -251,19 +258,17 @@ def chrysler_pav():
 #() Chung King Inn
 def cki_pav():
 #    time = 30
-    global gold
     print("You know ")
     print("You hear they have a meal with seven types of Chinese foods and a beverage that is only a dollar.")
     ckia()
 def ckia():    
+    global gold
     choice = input("Do you decide to purchase a meal for one dollar?\nyes or no\n ")
-    if choice == "yes":
-        gold - 1 
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.50)  
         print("You are seated outside in the Oriental garden and are treated to a meal of\nchicken chow mein, fried rice, shrimp egg roll, chow mein fried noodles,\nfruit roll, egg foo young and sauce, a fortune cookie and a soda.\nYou eat most of your meal, but can not conceive eating another bite.\nOn your way out your waitress hands you a bundle of firecrackers.\n'Oh boy, can't wait to play with those' you think to yourself.")
         cki1()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, as you please.")
         cki1()
     else:
@@ -286,10 +291,10 @@ def clairol_pav():
     clair1()
 def clair1():    
     choice = input("Which way do you go?\nleft or right\n ")
-    if choice == "left":
+    if choice in left:
         print("YOU ARE AT THE TOWER OF LIGHT PAVILION.")
         tol_pav()
-    elif choice == "right":
+    elif choice in right:
         print("YOU ARE AT THE FOUNTAIN OF THE PLANETS.")
         planets_foun()   
     else:
@@ -299,18 +304,16 @@ def clair1():
 #(30) Continental Circus
 def circus_pav():
 #    time = 90
-    global gold
     print("Walking up to the brightly colored circus tent, you are asked to pay a dollar to enter.")
     cca()
 def cca():    
+    global gold
     choice = input("Do you decide to enter the circus?\nyes or no\n ")
-    if choice == "yes":
-        gold - 1  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(1)  
         print("You enter the large yellow and white circus tent and try to take in everything that is going on.\nThere are acrobats, chimpanzees who play instruments, daredevil trapeze artists,\nequestrian horses, as well as all sorts of animal acts\nwith elephants and a gorilla that does bicycle tricks.\n")
         cc1()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, as you please.")
         cc1()
     else:
@@ -330,10 +333,10 @@ def eastman_pav():
     east1()
 def east1():    
     choice = input("Do you approach the figure?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         print("\nYou find out the figure is none other than Emitt Kelly Jr,\nwhich is the Pavilion's mascot.\nAfter you do your best miming act with Emitt\nyou decide where to head to next.")
         east2()
-    elif choice == "no":
+    elif choice in negative:
         print("\nOf course, as you please.")
         print("As you find your way out of the pavilion you decide where to head to next.")
         east2()   
@@ -345,10 +348,10 @@ def east2():
     print("Where do you want to go?")
     print("To the left is THE FIRST NATIONAL CITY BANK PAVILION\nand to the right is THE GARDEN OF MEDITATION.")    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE FIRST NATIONAL CITY BANK PAVILION.")
         fncb_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE GARDEN OF MEDITATION.")
         garden_pav()
     else:       
@@ -363,10 +366,10 @@ def fairs_foun():
 def fairs1():    
     print("To the left is THE JOHNSON WAX PAVILION and to the right is THE AUSTRIA PAVILION.")
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE JOHNSON WAX PAVILION.")
         jw_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE AUSTRIA PAVILION.")
         austria_pav()
     else:
@@ -382,10 +385,10 @@ def fncb_pav():
     fncb1()
 def fncb1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GARDEN OF MEDITATION.")
         garden_pav()   
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE CHRISTIAN SCIENCE CENTER.")
         christianscience_pav()
     else:
@@ -399,7 +402,7 @@ def garden_pav():
     gar1() 
 def gar1():
     choice = input("Would you like to read the quote or know more about one of the Biblical verses?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,3)
         if randint == 1: 
             print("\nNumbers 6:24-26 - 'The Lord bless you\n and keep you;\nthe Lord make his face shine on you\n and be gracious to you;\nthe Lord turn his face toward you\n and give you peace.'\n")
@@ -413,7 +416,7 @@ def gar1():
         elif randint == 4:
             print("\n'God Almighty first planted a Garden.\nAnd indeed it is the purest of human pleasures.\nIt is the greatest refreshment to the spirits of man.' -Francis Bacon\n")
             gar2()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")        
         gar2()
     else:
@@ -426,10 +429,10 @@ def gar2():
     gar3()
 def gar3():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE BELGIUM PAVILION.")
         belgium_pav()       
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE CHRISTIAN SCIENCE PAVILION.")
         christianscience_pav()
     else:            
@@ -445,10 +448,10 @@ def gc_pav():
     gc1()
 def gc1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE SOLAR FOUNTAIN")
         solar_foun()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE JAPAN PAVILION.")
         japan_pav()
     else:
@@ -466,10 +469,10 @@ def ge_pav():
     ge1()
 def ge1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE TOWER OF LIGHT PAVILION")
         tol_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE CLAIROL PAVILION.")
         clairol_pav()
     else:
@@ -483,7 +486,7 @@ def gm_pav():
     gm1() 
 def gm1():
     choice = input("Would you like to know more about one of the parts of the exhibit?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,5)
         if randint == 1: 
             print("A trip to the moon starts the ride taking the visitor past a scale model\nwhose craters and canyons are dotted with manned 'lunar-crawlers' and commuter space ships.\n") 
@@ -503,7 +506,7 @@ def gm1():
         elif randint == 6:
             print("The city of the future is shown complete with midtown airports, high-speed bus-trains, superskyscrapers,\nmoving sidewalks and underground conveyor belts for freight.\nAround the city is part of an intercontinental highway.\n")
             gm2()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")
         gm2()   
     else:
@@ -526,10 +529,10 @@ def greece_pav():
     gre1()
 def gre1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE AFRICAN PAVILION")
         african_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE UNISPHERE.")
         unisphere()
     else:
@@ -545,10 +548,10 @@ def guinea_pav():
     gui1()
 def gui1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE SIERRA LEONE PAVILION")
         sierra_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE JORDAN PAVILION.")
         jordan_pav()
     else:
@@ -563,12 +566,12 @@ def hall_pav():
     halla()
 def halla():
     choice = input("Would you like to know the answer to one of the questions on the wall?\nleft or right?\n ") 
-    if choice == "yes":
+    if choice in positive:
         print("\nThe answer to why can't individuals have everything they want is . . .")
         time.sleep(3)
         print("Individuals cannot have everything they want because\nthey are constrained by a budget. Goods and services cost money,\nmeaning you need to work and get paid in order to consume the goods and services they want.\nFor most people unfortunately, the money made by working is significantly less than\nthe value of the amount of goods and services they want.")
         hallb()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, lets move on.")
         hallb()
     else:
@@ -582,10 +585,10 @@ def hallb():
     hall2()
 def hall2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE VATICAN PAVILION.")
         vatican_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE INTERNATIONAL PAVILION.")
         international_pav()
     else:
@@ -595,21 +598,19 @@ def hall2():
 #(64) International Plaza
 def international_pav():
 #    time = 30     
-    global gold
     print("You enjoy displays such as U.N. postage stamps,\nworks of art and food specialties.")
     print("While walking about the pavilion you notice fairgoers eating a strange pastry.")
     print("So you walk up to a food vendor and ask what the pastry everyone is eating\n.The vendor tells you it is a Belguim waffle and asks if you want one.\n")
     int1()
-def int1():    
+def int1():  
+    global gold  
     choice = input("Do you decide to buy a Belguim waffle for one dollar?\nyes or no\n ")
-    if choice == "yes":
-        gold - 1  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(1) 
         print("As you look over the quite large pastry in amazement\nyou wonder how to start to eat it.\nYou decide to attack it and don't worry about it\nfalling all over your shirt and pants.")
         print("'Mmmmmm, that is delicious', you say out loud.\n")
         inta()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, as you please.")
         inta()
     else:
@@ -623,10 +624,10 @@ def inta():
     int2()
 def int2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE NEW YORK STATE PAVILION.")
         nysb_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE SWEDEN PAVILION.")
         sweden_pav()
     else:
@@ -641,7 +642,7 @@ def japan_pav():
     jpn1() 
 def jpn1():
     choice = input("Would you like to read the quote or know more about one of the Biblical verses?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,2)
         if randint == 1: 
             print("\nLand Area: 142,732 Square Miles, 1/21 that of the United States of America.\n")
@@ -652,7 +653,7 @@ def jpn1():
         elif randint == 3:
             print("\nPopulation Density: 674 persons per square mile.\n")
             jpn2()        
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")        
         jpn2()
     else:
@@ -663,10 +664,10 @@ def jpn2():
     print("After you take in the rest of the pavilion you decide where to go next.")
     print("Do you head left to THE UNITED ARAB REPUBLIC PAVILION\nor right to THE ROCKET THROWER SCULPTURE.")    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE UNITED ARAB REPUBLIC PAVILION.")
         uar_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE ROCKET THROWER SCULPTURE.")
         rocket()
     else:
@@ -681,12 +682,12 @@ def jw_pav():
     jw1()
 def jw1():    
     choice = input("Do you decide to enter?\nyes or no?\n ") 
-    if choice == "yes":
+    if choice in positive:
         print("Inside the Childrens Entertainment Center you climb through a 'fun machine',\na mazelike device full of mirrors that fracture images,\nsqueeze-bulbs that emit strange noises and cranks that operate robots.\n")
         print("On your way out you decide where to go to next.")
         print("Do you head left to THE JAPAN PAVILION\nor right to THE AUSTRIA PAVILION.")    
         jw2()
-    elif choice == "no":
+    elif choice in negative:
         print("Alright, where would you like to go to next?")
         print("Do you head left to THE JAPAN PAVILION\nor right to THE AUSTRIA PAVILION.")    
         jw2()
@@ -696,10 +697,10 @@ def jw1():
 
 def jw2():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE JAPAN PAVILION.")
         japan_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE AUSTRIA PAVILION.")
         austria_pav()
     else:
@@ -715,10 +716,10 @@ def jordan_pav():
     jor1()
 def jor1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE MOROCCO PAVILION.")
         mor_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE GREECE PAVILION.")
         greece_pav()
     else:
@@ -734,10 +735,10 @@ def lebanon_pav():
     leb1()
 def leb1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE UNISPHERE.")
         unisphere()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE PHILIPPINES REPUBLIC PAVILION.")
         phil_pav()
     else:
@@ -753,22 +754,20 @@ def light():
 #(76) Louisiana Pavilion
 def louisiana_pav():    
 #    time = 30    
-    global gold
     print("As you walk around the pavilion you enjoy the sights\nof a re-creation of New Orlean's Bourbon Street.\n")
     print("The sounds from the center of the pavilion\nhave you tapping your feet as you take a moment to watch the jazzmen\nplaying in a revolving bandstand in what is called Jazzland.")
     print("You hear there is a place to dance for teenagers and head to check it out.\nOnce you arrive at the Teen-Age Center, you are asked to pay one dollar.")
     loua()
 def loua():
+    global gold
     choice = input("Do you pay to enter the Teen-Age Center?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 1
-        print ("You have",gold)
-        print("")
+    if choice in positive:
+        pay(1)
 
 
 
         loub()
-    elif choice == "no":
+    elif choice in negative:
         print("\nOf course, as you please. Let's move on.")
         loub()
     else:
@@ -782,10 +781,10 @@ def loub():
     lou1()
 def lou1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE WESTINGHOUSE PAVILION.")
         westinghouse_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE NEW YORK STATE PAVILION.")
         nysc_pav()
     else:
@@ -802,10 +801,10 @@ def malaysia_pav():
     mal1()
 def mal1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE NEW JERSEY PAVILION.")
         westinghouse_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE UNISPHERE.")
         minnesota_pav()
     else:
@@ -822,10 +821,10 @@ def minnesota_pav():
     minn1()
 def minn1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE LOUISIANA PAVILION.")
         louisiana_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE NEW YORK STATE PAVILION.")
         nysb_pav()
     else:
@@ -841,10 +840,10 @@ def missouri_pav():
     miss1()
 def miss1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GENERAL MOTORS PAVILION.")
         gm_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE WISCONSIN PAVILION.")
         wisconsin_pav()
     else:
@@ -860,10 +859,10 @@ def mor_pav():
     mor1()
 def mor1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE AFRICAN PAVILION.")
         african_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE GREECE PAVILION.")
         greece_pav()
     else:
@@ -874,7 +873,7 @@ def mor1():
 def moses():
 #    time = 10
     choice = input("Do you go to see who he is?\nyes or no?\n ") 
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,2)
         if randint == 1: 
             print("\nYou ask a kid who looks your age who the man is in the middle\nof the crowd and he tells you that he was trying to figure it out, as well.\n")
@@ -888,7 +887,7 @@ def moses():
             print("\nYou ask a black woman who the man in the middle of the crowd is\nand she says that he is Robert Moses, president of the fair\nand one of the most dispicable human beings due to the mistreatment\nof minority groups while he was the city's parks commisioner and as the president of the public housing* in New York.\n")
             print("After you learn a little about the fair's president you decide where to go next.")
             fairs1() 
-    elif choice == "no":
+    elif choice in negative:
         print("Alright, let's go to the next pavilion.\n")
         fairs1()
     else:
@@ -905,10 +904,10 @@ def nj_pav():
     nj1()
 def nj1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE NEW YORK CITY PAVILION.")
         unisphere()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE UNISPHERE.")
         nyca_pav()
     else:
@@ -924,10 +923,10 @@ def nyca_pav():
     nyca1()
 def nyca1():   
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GENERAL MOTORS PAVILION.")
         gm_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE TRANSPORTATION AND TRAVEL PAVILION.")
         tat_pav()
     else:
@@ -943,10 +942,10 @@ def nycb_pav():
     nycb2()
 def nycb2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GENERAL MOTORS PAVILION.")
         gm_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE TRANSPORTATION AND TRAVEL PAVILION.")
         tat_pav()
     else:
@@ -964,10 +963,10 @@ def nysa_pav():
     nysa1()
 def nysa1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE ALASKA PAVILION.")
         alaska_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE MISSOURI PAVILION.")
         missouri_pav()
     else:
@@ -982,7 +981,7 @@ def nysb_pav():
     nysb1()
 def nysb1():    
     choice = input("Interested to know the lyrics to 'Everything's Coming up Moses'?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         print("\nYou'll be swell, You'll be great,")
         print("Gonna have the whole world on a plate.")
         print("Starting here, starting now")
@@ -1010,7 +1009,7 @@ def nysb1():
         print("After enjoying the song by a middle shool choir from Long Island\nyou decide where to head to next.")
         print("To the left is THE ALASKA PAVILION\nand to the right is THE MISSOURI PAVILION.")
         nysb2()
-    elif choice == "no":
+    elif choice in negative:
         print("\nOf course, as you please. Let's move on to the next pavilion.")
         print("To the left is THE ALASKA PAVILION\nand to the right is THE MISSOURI PAVILION.")
         nysb2()
@@ -1021,10 +1020,10 @@ def nysb1():
     nysb2()
 def nysb2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE ALASKA PAVILION.")
         alaska_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE MISSOURI PAVILION.")
         missouri_pav()
     else:
@@ -1038,7 +1037,7 @@ def nysc_pav():
     nysc1()
 def nysc1():
     choice = input("Would you like to know more about one of the artworks?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,2)
         if randint == 1: 
             print("Roy\n")
@@ -1049,7 +1048,7 @@ def nysc1():
         elif randint == 3:
             print("Robert\n")
             nysc2() 
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")
         nysc2()
     else:
@@ -1063,10 +1062,10 @@ def nysc2():
     nysc3()
 def nysc3():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE ALASKA PAVILION.")
         alaska_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE MISSOURI PAVILION.")
         missouri_pav()
     else:
@@ -1082,10 +1081,10 @@ def pakistan_pav():
     pak1()
 def pak1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE NEW YORK STATE PAVILION.")
         nysb_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE NEW JERSEY PAVILION.")
         nj_pav()
     else:
@@ -1101,10 +1100,10 @@ def panam_pav():
     pan1()
 def pan1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
        print("\nYOU ARE AT THE EASTMAN KODAK PAVILION.")
        eastman_pav()
-    elif choice == "right":
+    elif choice in right:
        print("\nYOU ARE AT SERMONS OF SCIENCE PAVILION.")
        sfs_pav()
     else:
@@ -1114,18 +1113,16 @@ def pan1():
 #(102) Pepsi-Cola Pavilion
 def pepsi_pav():
 #    time = 25 
-    global gold
-    print("As you come up to the entrance of the 'Girdling the Globe' inside the pavilion\nyou are asked to pay 60 cents.")
+    print("As you come up to the entrance of the 'Girdling the Globe' exhibit within the pavilion\nyou are asked to pay 60 cents.")
     pepa()
 def pepa():
+    global gold
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.60  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.60)
         print("\nWhile in the pavilion you take a boat ride called 'It's a Small World'.\nYou see scenes such as the Eiffel Tower,\na Dutch Windmill and India's Taj Mahal\nas anmimated figures dance and sing 'It's a Small World'.")
         pep1()
-    elif choice == "no":
+    elif choice in negative:
         print("That's fine. Let's go to the pavilion next door then.\n")
         time.sleep(3)
         print("You are at THE EASTMAN KODAK PAVILION.")
@@ -1136,7 +1133,7 @@ def pepa():
 
 def pep1():    
     choice = input("While walking around the rest of the pavilion\nyou catch yourself humming the theme song from the boat ride.\nInterested to know the lyrics to 'It's a Small World'?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         print("\nIt's a world of laughter, a world of tears")
         print("It's a world of hopes and a world of fears")
         print("There's so much that we share, that it's time we're aware")
@@ -1157,7 +1154,7 @@ def pep1():
         print("It's a small world after all")
         print("It's a small, small world\n")
         pep2()
-    elif choice == "no":
+    elif choice in negative:
         print("\nOf course, as you please.")
         pep2()
     else:
@@ -1171,10 +1168,10 @@ def pep2():
     pep3()
 def pep3():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE EASTMAN KODAK PAVILION.")
         eastman_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU AT THE SCHAEFER BREWING PAVILION.")
         schaef_pav()
     else:
@@ -1188,7 +1185,7 @@ def phil_pav():
     phil1()
 def phil1():
     choice = input("Do you want to know more about one of the works of art from the pavilion guide description?\nyes or no?\n ") 
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,2)
         if randint == 1: 
             print("The First Panel depicts")
@@ -1211,7 +1208,7 @@ def phil1():
             print("One of the wisest and most beloved rulers during the 13th century was Kalantiaw,\nwho instituted a code of laws for the members of his barangay in the island of Panay.") 
             print("Generally conceded as more humane than the Code of Hamurabi,\nthe Code of Kalantiaw provided penalties for such unlawful acts as\nkilling, stealing, sacrilege, and disrespect for the aged and persons of authority.\n")
             phil2() 
-    elif choice == "no":
+    elif choice in negative:
         print("That's fine. Where would you like to go next?")
         phil2()
     else:
@@ -1221,10 +1218,10 @@ def phil1():
 def phil2():
     print("Do you head left to THE GREECE PAVILION\nor right to THE UNISPHERE?")
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GREECE PAVILION.")
         greece_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE UNISPHERE.")
         unisphere()
     else:
@@ -1243,10 +1240,10 @@ def planets_foun():
     plan1()
 def plan1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE TOWER OF LIGHT PAVILION.")
         tol_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE FOUNTAIN OF THE FAIRS.")
         fairs_foun()
     else:
@@ -1265,10 +1262,10 @@ def rocket():
     rock1()
 def rock1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE UNITED ARAB REPUBLIC PAVILION   ")
         uar_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE LEBANON PAVILION.")
         lebanon_pav()
     else:
@@ -1284,7 +1281,7 @@ def schaef_pav():
     shaef1()
 def shaef1():    
     choice = input("Do you go to see what is going on?\nyes or no?\n ") 
-    if choice == "yes":
+    if choice in positive:
         print("\n . . . ")
 
 
@@ -1292,7 +1289,7 @@ def shaef1():
 
 
         shaef2()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")
         shaef2()
     else:
@@ -1305,10 +1302,10 @@ def shaef2():
     shaef3()
 def shaef3():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE PAN AMERICAN HIGHWAY GARDENS.")
         panam_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE GENERAL ELECTRIC PAVILION.")
         ge_pav()
     else:
@@ -1322,12 +1319,12 @@ def sfs_pav():
     sfs1()
 def sfs1():
     choice = input("Do you stay to see what happens next?\nyes or no?\n ") 
-    if choice == "yes":
+    if choice in positive:
         print("The man on the stage yells, 'Lights!',\nand the auditorium darkens followed by the command 'On!'\nYou then see sparks come from the board of wood as it then bursts into flames.\nSeemingly unharming the presenter, wow!\nAfter watching a couple more demonstrations you consider where to head to next.")
         print("Where would you like to go?")
         print("To the left is THE PAN AMERICAN HIGHWAY GARDEN\nand to the right is THE GUINEA PAVILION.")
         sfs2()
-    elif choice == "no":
+    elif choice in negative:
         print("That's fine. Where would you like to go next?")
         print("To the left is THE PAN AMERICAN HIGHWAY GARDEN\nand to the right is THE GUINEA PAVILION.")
         sfs2()
@@ -1337,10 +1334,10 @@ def sfs1():
 
 def sfs2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE PAN AMERICAN HIGHWAY GARDENS.")
         americanisrael_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE GUINEA PAVILION.")
         guinea_pav()
     else:
@@ -1350,17 +1347,15 @@ def sfs2():
 #(119) Sierra Leone Pavilion
 def sierra_pav():
 #    time = 30 
-    global gold
     print("As you come up to the entrance of the pavilion\nyou are asked to pay 10 cents.")
     seia()
 def seia():
+    global gold
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.10  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.10)  
         seib()
-    elif choice == "no":
+    elif choice in negative:
         print("Alright, let's go to THE MALAYSIA PAVILION.")
         malaysia_pav()
     else:
@@ -1378,10 +1373,10 @@ def seib():
     sie1()
 def sie1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE MALAYSIA PAVILION.")
         malaysia_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE AFRICAN PAVILION.")
         african_pav()
     else:
@@ -1395,7 +1390,7 @@ def sinclair_pav():
     sin1()
 def sin1():
     choice = input("Would you like to know more about one of the dinosaurs\nbased from the Dinoland Guidebook 'The Exciting World of Dinosaurs'?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,8)
         if randint == 1: 
             print("Brontosaurus\n(Bront-o-sawr-us)")
@@ -1433,7 +1428,7 @@ def sin1():
             print("STEGOSAURUS\n(Steg-o-sawr-us)")
             print("The double row of bony plates on this dinosaurs back made them one of the oddest-looking of all dinosaurs. Apparently, they fought with their back to their enemies, defending themselves with the four long spikes on their tail. The front of their jaws formed a sort of beak. They ranged from 18 to 25 feet long, weighed about four tons. This slow-moving armored dinosaur fed on soft vegetation, lived in Western United States during the Jurassic Period.")
             sin2()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")
         sin2()
     else:
@@ -1463,10 +1458,10 @@ def solar_foun():
     sol1()
 def sol1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GUINEA PAVILION.")
         guinea_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE AUSTRIA PAVILION.")
         austria_pav()
     else:
@@ -1483,10 +1478,10 @@ def sweden_pav():
     swed1()
 def swed1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE NEW YORK STATE PAVILION.")
         nysc_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE PAKISTAN PAVILION.")
         pakistan_pav()
     else:
@@ -1503,10 +1498,10 @@ def switzerland_pav():
     switz1()
 def switz1():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE INTERNATIONAL PLAZA")
         international_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE SIERRA LEONE PAVILION.")
         sierra_pav()
     else:
@@ -1521,10 +1516,10 @@ def tol_pav():
     tol1()
 def tol1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GENERAL CIGAR PAVILION.")
         gc_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE JOHNSON WAX PAVILION.")
         jw_pav()
     else:
@@ -1540,10 +1535,10 @@ def tat_pav():
     tat1()
 def tat1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE SKF INDUSTRIES PAVILION.")
         skf_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE UNITED STATES RUBBER PAVILION.")
         usr_pav()
     else:
@@ -1559,10 +1554,10 @@ def uar_pav():
     uar1()
 def uar1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE JORDAN PAVILION.")
         jordan_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE LEBANON PAVILION.")
         lebanon_pav()
     else:
@@ -1572,17 +1567,15 @@ def uar1():
 #(138) United States Rubber
 def usr_pav(): 
 #    time = 10 
-    global gold
     print("As you come up to the entrance of the tire shaped ferris wheel\nyou are asked to pay 25 cents.")
     usra()
 def usra():
+    global gold
     choice = input("Do you pay to take the ride?\nleft or right?\n ")
-    if choice == "yes":
-        gold - 0.25  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.25)  
         usrb()
-    elif choice == "no":
+    elif choice in negative:
         print("That's fine. Let's go to THE CHRYSLER PAVILION.")
         chrysler_pav()
     else:
@@ -1596,10 +1589,10 @@ def usrb():
     usr1()
 def usr1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE SKF INDUSTRIES PAVILION.")
         skf_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE CHRYSLER PAVILION.")
         chrysler_pav()
     else:
@@ -1629,10 +1622,10 @@ def uni1():
     print("Where do you decide to go to next?")
     print("To the left is THE WISCONSIN PAVILION\nand to the right is THE NEW YORK CITY PAVILION.")
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE WISCONSIN PAVILION")
         international_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE NEW YORK CITY PAVILION.")
         sierra_pav()
     else:
@@ -1648,10 +1641,10 @@ def vatican_pav():
     vat1()
 def vat1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE MINNESOTA PAVILION.")
         minnesota_pav()
-    elif choice == "right":
+    elif choice in right:
         print("YOU ARE AT THE ASTRAL FOUNTAIN.")
         astral_foun()
     else:   
@@ -1661,19 +1654,17 @@ def vat1():
 #(143) Walter's International Wax Museum
 def walters_pav():
 #    time = 25
-    global gold
     print("As you come up to the entrance of the building\nyou are asked to pay 50 cents.")
     walta()
 def walta():
+    global gold
     choice = input("Do you pay to enter the museum?\nyes or no?\n ")
-    if choice == "yes":
-        gold - 0.50  
-        print("You have",gold)
-        print("")
+    if choice in positive:
+        pay(.50)
         print("While in the exhibit you look over some 160 lifelike figures.\nThe figures are taken from art, history, mythology, movies and television.\nThe largest scene is a 20-by-30 foot copy of Leonardo da Vinci's 'The Last Supper'.")
         print("When you think you have seen all the figures in the museum you head for the exit.")
         waltb()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.")
         waltb()
     else:
@@ -1693,7 +1684,7 @@ def westinghouse_pav():
     west1()
 def west1():    
     choice = input("Interested to know about some of the items from the Time Capsule?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         randint = random.randint(0,5)
         if randint == 1: 
             print("Alarm clock, can opener, nail file, tooth brush,\nset of alphabet blocks, baseball, deck of cards, and poker chips.") 
@@ -1710,7 +1701,7 @@ def west1():
         elif randint == 5:
             print("Newsreel of President Franklin D. Roosevelt\nspeaking at Gettysburg, Pennsylvania, July 3, 1938,\nJesse Owens winning 100 meter dash in 1936 Olympic games,\nand Collegiate football: Harvard-Yale, November 1936 at 'Yale Bowl,'\nNew Haven, Conn. Yale wins 14-13.") 
             westa()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")
         westa()
     else:
@@ -1723,10 +1714,10 @@ def westa():
     west2()
 def west2():
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE ALASKA PAVILION.")
         alaska_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE NEW YORK STATE PAVILION.")
         nysa_pav()
     else:
@@ -1741,10 +1732,10 @@ def wisconsin_pav():
     wisc1()
 def wisc1():
     choice = input("Would you like to know more about the block of cheese?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         print("The cheese was made for the Wisconsin Cheese Foundation\nand took 43 1/2 hours to make.\nThe size of the cheese is 6 1/2 feet wide, 5 1/2 feet high and 14 1/2 feet long.\nThe approximate weight of the cheese is 17 1/4 tons or 34,591 pounds.") 
         wisca()
-    elif choice == "no":
+    elif choice in negative:
         print("Of course, let's move on.\n")
         wisca()
     else:
@@ -1757,10 +1748,10 @@ def wisca():
     wisc2()
 def wisc2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE GENERAL MOTORS PAVILION")
         gm_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE TRANSPORTATION AND TRAVEL PAVILION.")
         tat_pav()
     else:
@@ -1770,10 +1761,10 @@ def wisc2():
 # First decision
 def first(): 
     choice = input("Which way do you go?\nleft or right?\n ")    
-    if choice == "left":
+    if choice in left:
         print("\nYOU ARE AT THE EASTMAN KODAK PAVILION")
         eastman_pav()
-    elif choice == "right":
+    elif choice in right:
         print("\nYOU ARE AT THE PEPSI-COLA PAVILION")
         pepsi_pav()
     else:
@@ -1783,7 +1774,7 @@ def first():
 # Second decision
 def second():    
     choice = input("Would you like to know more about the areas of the fair before you proceed?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         print("\nThe areas of the fair are: Industrial, International,\nFederal and State, Transportation, Lake Amusement, and Flushing Bay.\n")
         print("The Industrial Area has 45 pavilions that showcases America's industry.\nThe International Area is represented by 80 nations in 37 pavilions.")
         print("The Federal and State Area represents 19 states.\nThe Transportation Area shows off the many forms of transportation.")
@@ -1793,7 +1784,7 @@ def second():
         print("To your left you see THE EASTMAN KODAK PAVILION.")
         print("and to your right is THE PEPSI-COLA PAVILION.") 
         first() 
-    if choice == "no":    
+    elif choice in negative:    
         print("Of course, as you please.")
         print("\nThe sight of thousands of people as well as dozens of strange and colorful buildings\nare in all directions near and as far as the eye can see.")
         print("What do you want to see first?")
@@ -1836,7 +1827,7 @@ def name():
     intro()
 def intro():
     choice = input("Do you decide to sneak into the 1964-1965 World's Fair?\nyes or no\n ")
-    if choice == "yes":
+    if choice in positive:
         print("")
         print("     ----------------------------------------")
         print("      WELCOME TO THE 1964-1965 WORLD'S FAIR!!")
@@ -1844,7 +1835,7 @@ def intro():
         print("")       
         print("You are now within the fair at the Court of the Five Boroughs.\nTo the left is the International Area and to the right is the Industrial Area.")
         choice = input("Would you like to know more about the areas of the fair before you proceed?\nyes or no\n ")
-        if choice == "yes":
+        if choice in positive:
             print("\nThe areas of the fair are: Industrial, International,\nFederal and State, Transportation, Lake Amusement, and Flushing Bay.\n")
             print("The Industrial Area has 45 pavilions that showcases America's industry.\nThe International Area is represented by 80 nations in 37 pavilions.")
             print("The Federal and State Area represents 19 states.\nThe Transportation Area shows off the many forms of transportation.")
@@ -1854,7 +1845,7 @@ def intro():
             print("To the left is THE EASTMAN KODAK PAVILION.")
             print("and to your right is THE PEPSI-COLA PAVILION.")  
             first()
-        if choice == "no":    
+        elif choice in negative:  
             print("\nThe sight of thousands of people as well as dozens of strange and colorful buildings\nare in all directions near and as far as the eye can see.")
             print("What do you want to see first?")
             print("To the left is THE EASTMAN KODAK PAVILION.")
@@ -1863,7 +1854,7 @@ def intro():
         else: 
             print("I didn't understand that.") 
             second() 
-    elif choice == "no":
+    elif choice in negative:
         print("\nLooks like you are not ready for this year's World's Fair. Goodbye.")
         time.sleep(5)
         exit()

@@ -7,10 +7,10 @@ gold = 3.25
 
 # choices: [yes, no], [left, right]
 
-# ['YES', 'Yes', 'yes', 'yeah', 'Y', 'y']
-# ['NO', 'No', 'no', 'nah', 'N', 'n']
-# ['LEFT', 'Left', 'left', 'L', 'l']
-# ['RIGHT', 'Right', 'right', 'R', 'r']
+positive = ['YES', 'Yes', 'yes', 'yep', 'yeah', 'Y', 'y']
+negetive = ['NO', 'No', 'no', 'nah', 'N', 'n']
+left = ['LEFT', 'Left', 'left', 'L', 'l']
+right = ['RIGHT', 'Right', 'right', 'R', 'r']
 
 
 #(2) African Pavilion
