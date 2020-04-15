@@ -3,7 +3,7 @@ from sys import exit
 import time
 import random
 #total = 360 (time in minutes)
-gold = 2.50
+gold = 2.35
 
 # choices: [yes, no], [left, right]
 positive = ['YES', 'Yes', 'yes', 'yep', 'yeah', 'Y', 'y']
@@ -34,10 +34,10 @@ def afria():
 
 def afrib():
     print("The pavilion is made up of round huts that represent 24 nations\nof sub-Saharan Africa and stands on a broad platform\nerected on stilts above water.")
-    print("As you walk into the pavilion you hear the sounds of chanting and drum beats.\nAs you walk in the open-air entertainment area\nyou see Watsui men from Rwanda perform a spirited dance\nand demonstrate their ability at high-jumping.\nBurundi drummers and West African dancers also perform.")
+    print("As you enter the pavilion you hear the sounds of chanting and drum beats.\nAs you walk into the open-air entertainment area\nyou see Watsui men from Rwanda perform a spirited dance\nand demonstrate their ability at high-jumping.\nBurundi drummers and West African dancers also perform.")
     time.sleep(2)
     print("After taking the performance you consider where to go next.")
-    print("To the left is THE NEW JERSEY PAVILION and to the right is THE UNISPHERE.")
+    print("To the left is THE NEW JERSEY PAVILION\nand to the right is THE UNISPHERE.")
     afri1()
 def afri1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -58,8 +58,6 @@ def afri1():
 def alaska_pav():
 #    time = 30     
     print("While in the igloo shaped pavilion you observe\nthe 32-square-foot topographical model of Alaska.")
-    
-
     
     time.sleep(2)
     print("Where would you like to go to next?")
@@ -90,8 +88,6 @@ def aminda():
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
     if choice in positive:
         pay(.50)  
-            
-            
             
         amind1()
     elif choice in negative:
@@ -143,8 +139,6 @@ def amera():
 def amerb():
     print("Within the pavilion you enjoy scenes and artifacts portraying 4,000 years of Jewish history.")
     
-    
-    
     time.sleep(2)
     print("After you walk around the Pavilion and to its top\nyou consider which Pavilion to head to next.")
     print("Do you head left to THE HALL OF FREE ENTERPRISE PAVILION\nor right to THE SWITZERLAND PAVILION")
@@ -167,9 +161,7 @@ def amer1():
 #(11) Austria Pavilion
 def austria_pav():    
 #    time = 60      
-    print("The pavilion is in the shape of an 'A', which you find out is to\nsymbolize Austria as a land of mountains and tourism.\nWithin the wooden structure you hear the music of Mozart and Strauss\nas you learn about the nation's industry, products and handicraft.")
-    
-    
+    print("The pavilion is in the shape of an 'A', which you find ou\nis to symbolize Austria as a land of mountains and tourism.\nWithin the wooden structure you hear the music of Mozart and Strauss\nas you learn about the nation's industry, products and handicraft.")
     
     time.sleep(2)
     print("Where would you like to head to now?")
@@ -216,7 +208,7 @@ def belb():
     print("You learn that the Gilles hark back to 1540, when Belgium was ruled by Spain,\nand the conquistidors' triumph over Peruvian Indians was celebrated at Mardi Gras.")
     time.sleep(2)
     print("Where do you decide to go to next?")
-    print("To your left you see THE LOUISIANNA PAVILION,\nand to the right is THE VATICAN PAVILION?")
+    print("To your left you see THE LOUISIANNA PAVILION\nand to the right is THE VATICAN PAVILION?")
     bel1()
 def bel1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -237,8 +229,6 @@ def bel1():
 def christianscience_pav():
 #    time = 30 
     print("The pavilion is in a star-shape\nand their is descriptions of the faith\nwith displays and recorded testimonials.")
-    
-    
     
     time.sleep(2)
     print("After walking around the pavilion\nyou decide where you would like to head to next.")
@@ -265,8 +255,6 @@ def chrysler_pav():
 #    time = 60     
     print("You enter an exhibit that is on one of five islands that make up the pavilion.\nThe exhibit is titled Engineering Island and is in the shape\nof a 100-foot engine with a 50-foot dragon for a crankshaft.\nWithin the exhibit there is a turbine engine on display developed by Chrysler.\nOn another island, which is the shape of the company's Pentastar symbol,\nis the Puppet Show exhibit. A 24-minute musical comedy.")
     
-    
-
     time.sleep(2)
     print("After walking around the rest of the pavilion you decide it is time to head on home for dinner.")
     print("I hope you enjoyed the 1964-1965 World's Fair. Goodbye.")
@@ -308,7 +296,7 @@ def clairol_pav():
     print("As soon as you walk up to the pavilion\nyou are told 'Women 16 and older only.'")
     time.sleep(2)
     print("So, you turn around and consider where to go from here.")
-    print("To the left is THE TOWER OF LIGHT PAVILION and to the right is THE FOUNTAIN OF THE PLANETS.")
+    print("To the left is THE TOWER OF LIGHT PAVILION\nand to the right is THE FOUNTAIN OF THE PLANETS.")
     clair1()
 def clair1():    
     choice = input("Which way do you go?\nleft or right\n ")
@@ -395,7 +383,7 @@ def fncb_pav():
     print("Also, you find out First National City Bank\nis the only bank with a branch at the fair\nand that there are two buildings that are\nassociated with the Bank. This is the exhibit building\nand the other is the operations building.")
     time.sleep(2)
     print("After contemplating what you would do with\na few extra bucks, you consider which pavilion\nyou would like to head to next.")
-    print("Do you go left to THE GARDEN OF MEDITATION,\nor right to THE CHRISTIAN SCIENCE PAVILION?")
+    print("Do you go left to THE GARDEN OF MEDITATION\nor right to THE CHRISTIAN SCIENCE PAVILION?")
     fncb1()
 def fncb1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -416,36 +404,36 @@ def fncb1():
 def garden_pav():
 #    time = 20     
     print("As you continue to walk through the Garden\nyou notice the hum of the busy Fair become quieter and quieter.\nAll around you are trees, as well as laurel and azaleas.\nAlso in the Garden are Biblical references and a quotation from Sir Francis Bacon.")
-    gar1() 
-def gar1():
+    gara() 
+def gara():
     choice = input("Would you like to read the quote or know more about one of the Biblical verses?\nyes or no\n ")
     if choice in positive:
         randint = random.randint(0,3)
         if randint == 1: 
             print("\nNUMBERS 6:24-26\n 'The Lord bless you\n and keep you;\n the Lord make his face shine on you\n and be gracious to you;\nthe Lord turn his face toward you\n and give you peace.'\n")
-            gar2()        
+            gar1()        
         elif randint == 2:
             print("\nMICA 6:8 -\n 'He has shown you, O mortal, what is good.\n And what does the Lord require of you?\n To act justly and to love mercy\n and to walk humbly with your God.'\n")
-            gar2()
+            gar1()
         elif randint == 3:
             print("\nROMANS 12:10 & 12 -\n 'Be devoted to one another in love. Honor one another above\n yourselves. Never be lacking in zeal, but keep your spiritual\n fervor, serving the Lord. Be joyful in hope, patient in affliction,\n faithful in prayer.'\n")
-            gar2()        
+            gar1()        
         elif randint == 4:
             print("\n'God Almighty first planted a Garden.\nAnd indeed it is the purest of human pleasures.\nIt is the greatest refreshment to the spirits of man.' -Francis Bacon\n")
-            gar2()
+            gar1()
     elif choice in negative:
         print("Of course, let's move on.\n")        
-        gar2()
+        gar1()
     else:
         print("I didn't understand that.\n")
-        gar1()
+        gara()
 
-def gar2():
+def gar1():
     time.sleep(2)
     print("After you relax in the Garden,\nyou contemplate where to head to next.")
-    print("Do you head left to THE BELGIUM PAVILION,\nor right to THE CHRISTIAN SCIENCE PAVILION?")
-    gar3()
-def gar3():    
+    print("Do you head left to THE BELGIUM PAVILION\nor right to THE CHRISTIAN SCIENCE PAVILION?")
+    gar2()
+def gar2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
     if choice in left:
         print("\nYOU ARE AT THE BELGIUM PAVILION")
@@ -457,16 +445,16 @@ def gar3():
         christianscience_pav()
     else:            
         print("I'm sorry, I didn't understand that\n")
-        gar3()
+        gar2()
 
 
 #(46) General Cigar Pavilion
 def gc_pav():
 #    time = 30
-    print("Before you enter the pavilion you take in the sight of 12-foot smoke rings float into the air.\nWhile inside you watch a magic show presented by Mark Wilson.\nThe magician causes human beings and objects to appear from nowhere, float and vanish.")
+    print("Before you enter the pavilion you take in the sight of\n12-foot smoke rings float into the air.\nWhile inside you watch a magic show presented by Mark Wilson.\nThe magician causes human beings and objects to\nappear from nowhere, float and vanish.")
     time.sleep(2)
     print("After you enjoy the show you decide where to head to next.")
-    print("To the left is THE SOLAR FOUNTAIN and to the right is THE JAPAN PAVILION ")
+    print("To the left is THE SOLAR FOUNTAIN\nand to the right is THE JAPAN PAVILION ")
     gc1()
 def gc1():
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -486,12 +474,11 @@ def gc1():
 #(47) General Electric Pavilion
 def ge_pav():
 #    time = 45
-    print("As you enter the large dome structure you head to the exhibit 'Progressland',\nproduced by Walt Disney and depicts the history of electricity.")
-    print("The exhibit has four sections that depict different time periods\nand the electricity capabilites they had during that time period, starting with the 1890's.")
-    print("before you exit the pavilion you watch a demonstration of a controlled thermonuclear fusion.\nYou watch as a magnetic field squeezes a plasma of deuterium gas for\na few millionths of a second at a temperature of 20 million degrees Fahrenheit.")
+    print("As you enter the large dome structure you head to the exhibit\n'Progressland', produced by Disney and depicts the history of electricity.")
+    print("The exhibit has four sections that depict different time periods\nand the electricity capabilites they had during that time period,\nstarting with the 1890's. Before you exit the pavilion\nyou watch a demonstration of a controlled thermonuclear fusion.\nA magnetic field squeezes a plasma of deuterium gas for\na few millionths of a second at a temperature\nof 20 million degrees Fahrenheit.")
     time.sleep(2)
     print("Where would you like to go next?")
-    print("To the left is THE TOWER OF LIGHT PAVILION and to the right is THE CLAIROL PAVILION ")
+    print("To the left is THE TOWER OF LIGHT PAVILION\nand to the right is THE CLAIROL PAVILION ")
     ge1()
 def ge1():
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -553,11 +540,12 @@ def gm2():
 #(49) Greece Pavilion
 def greece_pav():
 #    time = 20
+
     print("While inside you look over large photomurals of Athens\nseen through the pillars of the Parthenon.")
     print("As you walk around the pavilion you learn about the nation's\nindustrial developement, agricultural progress\nand contemporary sculpture and ceramics.")
     time.sleep(2)
     print("Where would you like to go next?")
-    print("To the left is THE AFRICAN PAVILION and to the right is THE UNISPHERE.")
+    print("To the left is THE AFRICAN PAVILION\nand to the right is THE UNISPHERE.")
     gre1()
 def gre1():
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -578,9 +566,9 @@ def gre1():
 def guinea_pav():
 #    time = 15
     print("You take a bridge leading to three buildings that make up the pavilion.\nWhile inside you watch members of Les Ballet Africains perform\ntheir interpretations of Guinean dances.")
-    print("Before you exit the pavilion you look over the many tribal carvings and jewelry on display.\nWhere do you decide to go next?")
+    print("Before you exit the pavilion you look over\nthe many tribal carvings and jewelry on display.\nWhere do you decide to go next?")
     time.sleep(2)
-    print("To the left is THE SIERRA LEONE PAVILION and to the right is THE JORDAN PAVILION.")
+    print("To the left is THE SIERRA LEONE PAVILION\nand to the right is THE JORDAN PAVILION.")
     gui1()
 def gui1():
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -787,10 +775,11 @@ def jor1():
 #(72) Lebanon Pavilion
 def lebanon_pav():    
 #    time = 45
-    print("Once you enter the pavilion you are greeted with\na 80-million-year-old fossil found in lebanon.\nThe fossil is inset into a green onyx bas-relief map\nthat shows the locations of Lebanon's principal towns.")
+    print("Before entering you take in the Lebanese stone\nthat the structure is constructed from.\nThe pavilion is a group of cubelike buildings that\nresemble houses from a typical Lebanese village that surround\nthe mountain slopes where the nation's cedars grow.")
+    print("Once in the pavilion you are greeted with a\n80-million-year-old fossil found in Lebanon.\nThe fossil is inset into a green onyx bas-relief map\nthat shows the locations of Lebanon's principal towns.")
     time.sleep(2)
-    print("After you take in the rest of the exhibits within the pavilon you decide where to go next.") 
-    print("Do you head left to THE PHILIPINES PAVILION\nor right to THE UNISPHERE?")
+    print("After you take in the rest of the exhibits within\nthe pavilon you decide where to go next.") 
+    print("Do you head left to THE UNISPHERE\nor right to THE PHILIPINES REPUBLIC PAVILION?")
     leb1()
 def leb1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -819,8 +808,6 @@ def loua():
     choice = input("Do you pay to enter the Teen-Age Center?\nyes or no?\n ")
     if choice in positive:
         pay(1)
-
-
 
         loub()
     elif choice in negative:
@@ -858,7 +845,7 @@ def malaysia_pav():
     print("Also within the pavilion are visual devices\nand taped commentaries on pickup phones.\nWhich aquaint visitors to the pavilion with Malaysia's\npeople, government, industry and arts.")
     time.sleep(2)
     print("Where would you like to go to now?")
-    print("To the left is THE NEW JERSEY PAVILION and to the right is THE UNISPHERE.")
+    print("To the left is THE NEW JERSEY PAVILION\nand to the right is THE UNISPHERE.")
     mal1()
 def mal1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -945,38 +932,6 @@ def mor1():
         mor1()
 
 
-# Robert Moses
-def moses():
-#    time = 10
-    choice = input("Do you go to see who he is?\nyes or no?\n ") 
-    if choice in positive:
-        randint = random.randint(0,2)
-        if randint == 1: 
-            print("\nYou ask a kid who looks your age who the man is in the middle\nof the crowd and he tells you that he was trying to figure it out, as well.\n")
-            print("After your attempt to learn a little about the important person\nin the white suit you decide where to go next.")
-            fairs1() 
-        elif randint == 2:
-            print("\nYou ask a white man who the figure in the middle of the crowd is\nand he says that he is Robert Moses, president of the fair\nand one of the most important men living today\ndue to the number of parks, highways and bridges\nhe was instrumental in creating throughout New York.\n")
-            print("After you learn a little about the fair's president you decide where to go next.")
-            
-            
-            
-            fairs1()
-        elif randint == 3:
-            print("\nYou ask a black woman who the man in the middle of the crowd is\nand she says that he is Robert Moses, president of the fair\nand one of the most dispicable human beings due to the mistreatment\nof minority groups while he was the city's parks commisioner and as the president of the public housing* in New York.\n")
-            print("After you learn a little about the fair's president you decide where to go next.")
-            
-            
-            
-            fairs1() 
-    elif choice in negative:
-        print("Alright, let's go to the next pavilion.\n")
-        fairs1()
-    else:
-        print("I didn't understand that.\n")
-        moses()
-
-
 #(92) New Jersey
 def nj_pav(): 
 #    time = 30     
@@ -991,11 +946,11 @@ def nj1():
     if choice in left:
         print("\nYOU ARE AT THE NEW YORK CITY PAVILION")
         time.sleep(2)
-        unisphere()
+        nyca_pav()
     elif choice in right:
         print("\nYOU ARE AT THE UNISPHERE")
         time.sleep(2)
-        nyca_pav()
+        unisphere()
     else:
         print("I didn't understand that.\n")
         nj1()
@@ -1031,8 +986,8 @@ def nycb_pav():
     time.sleep(2)
     print("After walking around the pavilion you decide where to go to next?")
     print("To the left is THE GENERAL MOTORS PAVILION\nand to the right is THE TRANSPORTATION AND TRAVEL PAVILION.")
-    nycb2()
-def nycb2():    
+    nycb1()
+def nycb1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
     if choice in left:
         print("\nYOU ARE AT THE GENERAL MOTORS PAVILION")
@@ -1044,7 +999,7 @@ def nycb2():
         tat_pav()
     else:
         print("I’m sorry, I didn’t catch that.\n")
-        nycb2()
+        nycb1()
 
 
 #(95) New York State Pavilion A
@@ -1115,8 +1070,8 @@ def nysb1():
         nysb1()
 
 def nysb2():    
-        time.sleep(2)
-        print("To the left is THE ALASKA PAVILION\nand to the right is THE MISSOURI PAVILION.")
+    time.sleep(2)
+    print("To the left is THE ALASKA PAVILION\nand to the right is THE MISSOURI PAVILION.")
     choice = input("Which way do you go?\nleft or right?\n ") 
     if choice in left:
         print("\nYOU ARE AT THE ALASKA PAVILION")
@@ -1135,40 +1090,37 @@ def nysb2():
 def nysc_pav():
 #    time = 30     
     print("As you walk around the Theaterama you enjoy the artwork on the outside of the theatre\nby Pop artists such as John Chamberlain, Robert Indiana, Roy Lichtenstein and James Rosenquist.")
-    nysc1()
-def nysc1():
+    nysca()
+def nysca():
     choice = input("Would you like to know more about one of the artworks?\nyes or no\n ")
     if choice in positive:
         randint = random.randint(0,2)
         if randint == 1: 
             print("Roy\n")
 
-
-            nysc2() 
+            nysc1() 
         elif randint == 2:
             print("Ben\n")
-           
-            
-            nysc2() 
+                      
+            nysc1() 
         elif randint == 3:
             print("Robert\n")
-            
-            
-            nysc2() 
+             
+            nysc1() 
     elif choice in negative:
         print("Of course, let's move on.\n")
-        nysc2()
+        nysc1()
     else:
         print("I didn't understand that.\n")
-        nysc1()
+        nysca()
 
-    nysc2()
-def nysc2():
+    nysc1()
+def nysc1():
     time.sleep(2)
     print("After you take in the rest of the art around the building\nyou consider where would you like to go to next?")
     print("To the left is THE ALASKA PAVILION\nand to the right is THE MISSOURI PAVILION.")
-    nysc3()
-def nysc3():    
+    nysc2()
+def nysc2():    
     choice = input("Which way do you go?\nleft or right?\n ") 
     if choice in left:
         print("\nYOU ARE AT THE ALASKA PAVILION")
@@ -1180,7 +1132,7 @@ def nysc3():
         missouri_pav()
     else:
         print("I didn't understand that.\n")
-        nysc3()
+        nysc2()
 
 
 #(98) Pakistan Pavilion
@@ -1189,7 +1141,7 @@ def pakistan_pav():
     print("While walking through the pavilion you learn about the country's history\nthrough relics dating back thousands of years.")
     time.sleep(2)
     print("After taking your time to take in all the sights and sounds of the pavilion\nyou consider your next destination.")
-    print("To the left is THE NEW YORK STATE PAVILION and to the right is THE NEW JERSEY PAVILION.")
+    print("To the left is THE NEW YORK STATE PAVILION\nand to the right is THE NEW JERSEY PAVILION.")
     pak1()
 def pak1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -1232,14 +1184,14 @@ def pan1():
 #(102) Pepsi-Cola Pavilion
 def pepsi_pav():
 #    time = 25 
-    print("As you come up to the entrance of the 'Girdling the Globe' exhibit within the pavilion\nyou are asked to pay 60 cents.")
+    print("As you come up to the entrance of the 'Girdling the Globe' exhibit,\nwithin the pavilion, you are asked to pay 60 cents.")
     pepa()
 def pepa():
     global gold
     choice = input("Do you pay to enter the pavilion?\nyes or no?\n ")
     if choice in positive:
         pay(.60)
-        print("\nWhile in the pavilion you take a boat ride called 'It's a Small World'.\nYou see scenes such as the Eiffel Tower,\na Dutch Windmill and India's Taj Mahal\nas anmimated figures dance and sing 'It's a Small World'.")
+        print("While in the pavilion you take a boat ride called 'It's a Small World'.\nYou see scenes such as the Eiffel Tower,\na Dutch Windmill and India's Taj Mahal\nas anmimated figures dance and sing 'It's a Small World'.")
         pep1()
     elif choice in negative:
         print("That's fine. Let's go to the pavilion next door then.\n")
@@ -1253,7 +1205,7 @@ def pepa():
 def pep1():    
     choice = input("While walking around the rest of the pavilion\nyou catch yourself humming the theme song from the boat ride.\nInterested to know the lyrics to 'It's a Small World'?\nyes or no\n ")
     if choice in positive:
-        print("It's a world of laughter, a world of tears")
+        print("\nIt's a world of laughter, a world of tears")
         print("It's a world of hopes and a world of fears")
         print("There's so much that we share, that it's time we're aware")
         print("It's a small world after all")
@@ -1285,51 +1237,51 @@ def pep2():
     print("After enjoying the rest of the pavilion\nyou decide where to head to next.")
     print("To the left is THE EASTMAN KODAK PAVILION.")
     print("and to the right is THE SCHAEFER BREWING PAVILION.")
-    pep3()
-def pep3():    
+    pepb()
+def pepb():    
     choice = input("Which way do you go?\nleft or right?\n ") 
     if choice in left:
         print("\nYOU ARE AT THE EASTMAN KODAK PAVILION")
         time.sleep(2)
         eastman_pav()
     elif choice in right:
-        print("\nYOU AT THE SCHAEFER BREWING PAVILION")
+        print("\nYOU ARE AT THE SCHAEFER BREWING PAVILION")
         time.sleep(2)
         schaef_pav()
     else:
         print("I didn't understand that.\n")
-        pep3()
+        pepb()
 
 
 #(103) Philippines Republic Pavilion
 def phil_pav():    
 #    time = 25     
-    print("While in the pavilion you enjoy twelve large hand-carved wood murals.\nWhich depict the story of the island's history.")
+    print("While in the pavilion you enjoy twelve large hand-carved\nwood murals. Which depict the story of the island's history.")
     phil1()
 def phil1():
-    choice = input("Do you want to know more about one of the works of art from the pavilion guide description?\nyes or no?\n ") 
+    choice = input("Do you want to know more about one of the works\nof art from the pavilion guide?\nyes or no?\n ") 
     if choice in positive:
         randint = random.randint(0,2)
         if randint == 1: 
-            print("The First Panel depicts")
+            print("\nThe First Panel depicts")
             print("'Malakas at Maganda'") 
-            print("In the beginning of Time, there was only the blue sky above,\nand the green sea below dotted here and there by islands filled with lush vegetation ... \nand flying about was a magnificent, black bird called the tigmamanukin.\n")
-            print("While resting on a bamboo thicket one day, the great bird heard\nan unusual noise coming from within a large bamboo stalk.\nIn curious concern, the bird pecked on the stalk, the bamboo split in two,\nand lo! from one hollow side emerged a handsome and powerfully-built brown man,\nand from the other side a beautiful brown maiden.")
+            print("In the beginning of Time, there was only the blue sky above,\nand the green sea below dotted here and there by islands filled with\nlush vegetation ... and flying about was a magnificent,\nblack bird called the tigmamanukin.\n")
+            print("While resting on a bamboo thicket one day, the great bird heard\nan unusual noise coming from within a large bamboo stalk.\nIn curious concern, the bird pecked on the stalk,\nthe bamboo split in two, and lo! from one hollow side\nemerged a handsome and powerfully-built brown man,\nand from the other side a beautiful brown maiden.")
             print("The man addressed the woman as Maganda (Tagalog word for 'beautiful')\nand she, in turn, called him Malakas (meaning 'strong'),\nand this is how they came to be known.")
-            print("Shortly thereafter and with the approval and blessing of Bathala,\nthe god-creator of all, Malakas took Maganda for his wife\nand their children and grand-children and other generations\nthat followed peopled the country now known as the Republic of the Philippines.\n")
+            print("Shortly thereafter and with the approval and blessing of Bathala,\nthe god-creator of all, Malakas took Maganda for his wife\nand their children and grand-children and other\ngenerations that followed peopled the country now\nknown as the Republic of the Philippines.\n")
             phil2() 
         elif randint == 2:
-            print("The Second Panel depicts")
+            print("\nThe Second Panel depicts")
             print("'The Malay Migrations'") 
             print("The Malays were not the first people in the Philippines.\nAetas, and a scattering of pygmy tribes now almost extinct,\nalready inhabited the country when the Malay migrations began.")
-            print("Recorded history tells of a fleet of fast-sailing binidays (outriggers)\ncomprising well-organized barangays (village communities)\nof some ten brave datus (tribal chieftans) from neighboring Borneo who,\nin the 13th century, fled their native land to escape the tyranny of Mukatunaw, their sultan.\nThey landed in Panay, westernmost island in the Visayan region that comprises the central area\nof the archipelago, where they settled. Shortly thereafter,\nother migratory waves from Borneo followed which accounts for the Malay\nracial stock of present-day Filipinos who now number well over 30 million.\n")
+            print("Recorded history tells of a fleet of fast-sailing binidays (outriggers)\ncomprising well-organized barangays (village communities)\nof some ten brave datus (tribal chieftans)\nfrom neighboring Borneo who, in the 13th century, fled their native land to escape\nthe tyranny of Mukatunaw, their sultan.\nThey landed in Panay, westernmost island in the Visayan region that comprises the central area\nof the archipelago, where they settled. Shortly thereafter,\nother migratory waves from Borneo followed which accounts for the Malay\nracial stock of present-day Filipinos who now number well over 30 million.\n")
             phil2() 
         elif randint == 3:
-            print("The Third Panel depicts")
+            print("\nThe Third Panel depicts")
             print("Code of Kalantiaw") 
-            print("Unknown and unpublicized is the fact that, long before Europe\nmade its first contact in the Philippines, the country and its people enjoyed\na fairly advanced civilization of its own.")
-            print("One of the wisest and most beloved rulers during the 13th century was Kalantiaw,\nwho instituted a code of laws for the members of his barangay in the island of Panay.") 
-            print("Generally conceded as more humane than the Code of Hamurabi,\nthe Code of Kalantiaw provided penalties for such unlawful acts as\nkilling, stealing, sacrilege, and disrespect for the aged and persons of authority.\n")
+            print("Unknown and unpublicized is the fact that, long before Europe\nmade its first contact in the Philippines, the country and\nits people enjoyed a fairly advanced civilization of its own.")
+            print("One of the wisest and most beloved rulers during the 13th century\nwas Kalantiaw,who instituted a code of laws for the members of\nhis barangay in the island of Panay.") 
+            print("Generally conceded as more humane than the Code of\nHamurabi, the Code of Kalantiaw provided penalties for such\nunlawful acts as killing, stealing, sacrilege,\nand disrespect for the aged and persons of authority.\n")
             phil2() 
     elif choice in negative:
         print("That's fine.")
@@ -1359,34 +1311,14 @@ def phil2():
 #(114) Schaefer Brewing Pavilion
 def schaef_pav():
 #    time = 10
-    print("As you walk around the pavilion you check out the gallery of outstanding\nsports photography in addition to the brewing industry history in Germany.")
-    print("While walking through the exhibit you notice some commotion coming from the ")
-    print("")
-    shaef1()
-def shaef1():    
-    choice = input("Do you go to see what is going on?\nyes or no?\n ") 
-    if choice in positive:
-        print("\n . . . ")
-
-
-
-
-        time.sleep(2)
-        shaef2()
-    elif choice in negative:
-        print("Of course, let's move on.\n")
-        time.sleep(2)
-        shaef2()
-    else:
-        print("I didn't understand that.\n")
-        shaef1()
-
-def shaef2():
+    print("As you walk around the Circle of Sports Gallery\nyou check out the gallery of outstanding sports photography\nin addition to the brewing industry history in Germany.")
+    print("Another exhibit you walk through is the Center Rotunda.\nWithin the rotunda is a diorama of the original brewery\nas it looked in 1842. However in this version, instead\nof people brewing, gnomes are depicted doing the typical operation.")
     time.sleep(2)
+    print("While making your way out you pass what is referred to as\nthe longest bar at the fair. Which is 100 feet long\nand faced with red, white and gold mosaic ceramic tiles.")
     print("Where would you like to go next?")
     print("To the left is THE PAN AMERICAN HIGHWAY GARDENS\nand to the right is THE GENERAL ELECTRIC PAVILION")
-    shaef3()
-def shaef3():    
+    shaef1()
+def shaef1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
     if choice in left:
         print("\nYOU ARE AT THE PAN AMERICAN HIGHWAY GARDENS")
@@ -1398,7 +1330,7 @@ def shaef3():
         ge_pav()
     else:
         print("I didn't understand that.\n")
-        shaef3()
+        shaef1()
 
 
 #(116) Sermons from Science Pavilion
@@ -1439,7 +1371,7 @@ def sfs2():
 #(119) Sierra Leone Pavilion
 def sierra_pav():
 #    time = 30 
-    print("As you come up to the entrance of the pavilion\nyou are asked to pay 10 cents.")
+    print("As you approach the entrance of the pavilion\nyou are asked to pay 10 cents.")
     seia()
 def seia():
     global gold
@@ -1459,8 +1391,6 @@ def seia():
 def seib():
     print("Walking up to the pavilion you notice a raised stage with people dancing.")
     print("As you get closer you watch two troupes perform intricate dances.")
-
-
 
     time.sleep(2)
     print("Where would you like to go next?")
@@ -1489,40 +1419,24 @@ def sinclair_pav():
 def sin1():
     choice = input("Would you like to know more about one of the dinosaurs\nbased from the Dinoland Guidebook 'The Exciting World of Dinosaurs'?\nyes or no\n ")
     if choice in positive:
-        randint = random.randint(0,8)
+        randint = random.randint(0,4)
         if randint == 1: 
             print("Brontosaurus\n(Bront-o-sawr-us)")
             print("One of the largest and best-known dinosaurs. Called 'Thunder Lizard' because the ground supposedly shook when they walked. This dinosaur was 70 to 80 feet in length and weighed about 20 tons. They had a very long neck which probably enabled them to feed on underwater plants in marshes and streams. They lived in North America, during the Jurassic Period some 135- to 180-million years ago.")
             sin2() 
         elif randint == 2:
-            print("STRUTHIOMIMUS\n(Stru-thi-o-mi-mus)")
-            print("Struthiomimus looked like an ostrich, with long hind limbs and small, hard beak. The name means 'ostrich mimic.' They were approximately 14 feet long, seven or eight feet high. Their front legs had clasping fingers and curved claws. They had large eyes and a slender neck. They probably ate fruits and vegetation and perhaps the eggs of other dinosaurs. Struthiomimus lived in the Cretaceous Period in North America some 63- to 135-million years ago.")
-            sin2() 
-        elif randint == 3:
-            print("TRACHODON\n(Trak-o-don)")
-            print("Trachodon was a plant-eater. They could walk either on their hind legs or on all fours. The name means 'rough tooth.' Some trachodons had 1,500 teeth, so arranged that, as one row wore out, another row replaced it. But these many teeth were useless as weapons against flesh-eating dinosaurs. Trachodon was a duck-billed, web-footed dinosaur, about 32 feet long and 14 feet high. They lived in North America in the late Cretaceous Period.")
-            sin2() 
-        elif randint == 4:
             print("TYRANNOSAURUS\n(Tye-ran-o-sawr-us)")
             print("Largest and most terrifying flesh-eater that ever lived. Their teeth were six inches long, like daggers with sharp, serrated cutting edges. They measured 50 feet from tip to tip, and their head rose 18 to 20 feet above the ground. Known as 'Tyrant Lizard,' this ferocious giant spelled death and destruction to most other creatures. They existed in Montana in the late Cretaceous Period. Tyrannosaurus reigned supreme for many millions of years.")
             sin2() 
-        elif randint == 5:
+        elif randint == 3:
             print("TRICERATOPS\n(Tri-ser-a-tops)")
             print("Triceratops was a giant horned dinosaur. The name means 'three horns on the face.' This tough-looking fellow resembled a rhinoceros. They were 20 to 30 feet in length, with a skull 7 feet long. Their best defense against meat-eating enemies was an active offense, employing the long brow horns. They were a vegetable-feeder with a beak like a parrot's and sharp teeth for chopping up plant food. Triceratops lived in Montana and Wyoming in Cretaceous times.")
             sin2()
-        elif randint == 6:
+        elif randint == 4:
             print("ANKYLOSAURUS\n(An-kyle-o-sawr-us)")
             print("Ankylosaurus was a walking fortress. The name means 'curved lizard.' They were completely covered with bony armor which protected them from bigger and stronger dinosaurs. They were about 20 feet long and 6 feet wide. Their skull was large, with an extra layer of bony plates. The huge bony club at the end of their tail was mighty useful as a weapon. Ankylosaurus was a plant-eater. They lived in Western United States and Canada during the Cretaceous Period.")
-            sin2() 
-        elif randint == 7:
-            print("CORYTHOSAURUS\n(Kor-ith-o-sawr-us)")
-            print("Although this duck-billed dinosaur averaged 30 feet in length, he was no match for the flesh-eating dinosaurs of his time. He lived in the water, may have eaten water plants, perhaps shellfish, too. Corythosaurus means 'helmet lizard' because of the large crest on his skull, which resembled a Corinthian helmet. He lived in North America during the late Cretaceous times. The duckbills were the most abundant of the dinosaurs.")
-            sin2() 
-        elif randint == 8:
-            print("ORNITHOLESTES\n(Or-nith-o-les-tes)")
-            print("Orintholestes weighted little more than a turkey. They were lightly built, had many hollow bones. They lived in the last part of the Jurassic Period in Wyoming. From such small, primitive reptiles came the giant, flesh-eating dinosaurs of later times. Alert and fast-moving, they probably fed on lizards and other small ground animals. This skull was comparatively small. Ornitholestes was about 6 feet in length, had a long tail, bird-like feet and sharp claws.")
-            sin2() 
-        elif randint == 9:
+            sin2()  
+        elif randint == 5:
             print("STEGOSAURUS\n(Steg-o-sawr-us)")
             print("The double row of bony plates on this dinosaurs back made them one of the oddest-looking of all dinosaurs. Apparently, they fought with their back to their enemies, defending themselves with the four long spikes on their tail. The front of their jaws formed a sort of beak. They ranged from 18 to 25 feet long, weighed about four tons. This slow-moving armored dinosaur fed on soft vegetation, lived in Western United States during the Jurassic Period.")
             sin2()
@@ -1544,8 +1458,6 @@ def sin2():
 #(123) SKF Industries Pavilion
 def skf_pav():
 #    time = 15 
-
-
 
     print("You walk around the 'Matter in Motion' exhibit which displays objects that use bearings\nsuch as a kitchen mixer to a truck axle, cut away to disclose their mechanical interiors.")    
     time.sleep(2)
@@ -1582,10 +1494,9 @@ def swed1():
 #(129) Switzerland Pavilion
 def switzerland_pav():
 #    time = 45     
-    print("While in the pavilion you check out the 'Time Center' near the entrance.\nAt the front of the exhibit are the dials and indicators of a large 'Master Clock'.")
-    print("The 'Master Clock' is so accurate that it can measure irregularities in the earth's rotation.")
+    print("While in the pavilion you check out the 'Time Center'\nnear the entrance. At the front of the exhibit are\nthe dials and indicators of a large 'Master Clock'.\nThe 'Master Clock' is so accurate that it can\nmeasure irregularities in the earth's rotation.")
     time.sleep(2)
-    print("After you take time to enjoy the rest of the exhibits you decide where to head to next.")
+    print("After you take time to enjoy the rest of the exhibits\nyou decide where to head to next.")
     print("To the left is THE INTERNATIONAL PAVILION\nand to the right is THE SIERRA LEONE PAVILION.")
     switz1()
 def switz1():
@@ -1606,7 +1517,7 @@ def switz1():
 #(132) Tower of Light Pavilion
 def tol_pav():
 #    time = 30   
-    print("You are taken into the building by a moving ramp that goes over a reflecting pool.\nThe ramp then deposits you inside a show where three-dimensional\nanimated figures illustrate the wonders of electric power and light.\nAfter you enjoy the show and check out the rest of the pavilion you consider where to go next.")
+    print("You are taken into the building by a moving ramp that goes over a reflecting pool.\nThe ramp then deposits you inside a show where three-dimensional\nanimated figures illustrate the wonders of electric power and light.\nAfter you enjoy the show and check out the rest\nof the pavilion you consider where to go next.")
     time.sleep(2)
     print("To the left is THE GENERAL CIGAR PAVILION\nand to the right is THE JOHNSON WAX PAVILION.")
     tol1()
@@ -1714,20 +1625,30 @@ def usr1():
 #(140) Unisphere
 def unisphere():
 #    time = 15     
-    print("While you try to get a better look at the fair's symbol,\nyou are stopped from getting closer due to a protest.")
-
-
-
-
-
-#    choice = input("Would you like to know more about the protest?\nyes or no\n")
-#    if choice == "yes":
-#        print("")
-#        print("")
-#    elif choice == "no":
-#        print("Of course, as you please.")
-#    else:
-#        print("I didn't understand that.\n")
+    print("While you try to get a better look at the fair's symbol,\nyou are stopped from getting closer due to\na line of people, young and old, walking around the Unisphere.\n")
+    unia()
+def unia():   
+    choice = input("Would you like to know more about the protest and their demands?\nyes or no\n")
+    if choice in positive:
+        randint = random.randint(0,4)
+        if randint == 1: 
+            print("\n1. EMPLOYMENT\nclose down all construction sites immediately\nuntil the work force in that industry is fully integrated\n")
+            uni1()
+        if randint == 2:
+            print("\n2. SLUM HOUSING\nbegin an immediate 'rent stike' throughout the ghetto areas\n")
+            uni1()
+        if randint == 3:
+            print("\n3. SCHOOLS\nproduce immediately a plan with a timetable\nfor total desegregation of all schools\n")    
+            uni1()
+        if randint == 4:
+            print("\n4. POLICE BRUTALITY\ncreate a Public-Review Board, selected by civl liberties,\ncivil rights, and church groups to\ninvestigate complaints of police brutality\n")
+            uni1()
+    elif choice in negative:
+        print("Of course, as you please.")
+        unia()
+    else:
+        print("I didn't understand that.\n")
+        unisphere()
 
     uni1()
 def uni1():
@@ -1807,7 +1728,7 @@ def westinghouse_pav():
 def west1():    
     choice = input("Interested to know about some of the items from the Time Capsule?\nyes or no\n ")
     if choice in positive:
-        randint = random.randint(0,6)
+        randint = random.randint(0,4)
         if randint == 1: 
             print("\nFrom the 'ARTICLES OF COMMON USE' section you identify an\nalarm clock, can opener, nail file, tooth brush,\nset of alphabet blocks, baseball, deck of cards, and poker chips.") 
             westa()
@@ -1914,13 +1835,31 @@ def ast1():
         ast1()
 
 
+# Fountain of the Fairs
+def fairs_foun():
+#    time = 10
+    print("Although smaller and not as dramatic as the previous fountain,\nyou take a seat on a bench overlooking the jet streams\nand enjoy the sites and sounds around you.\nAs you take in the pavilions and people around the fountain,\nyou notice a man wearing a white suit holding numerous blueprints.\nThere are a few men around him and they are all pointing\nto something on one of the blueprints that is opened up.\nBehind and around the group of men there are numerous people huddled around them.")
+    moses()
+def fairs1():    
+    print("To the left is THE JOHNSON WAX PAVILION\nand to the right is THE AUSTRIA PAVILION.")
+    choice = input("Which way do you go?\nleft or right?\n ") 
+    if choice in left:
+        print("\nYOU ARE AT THE JOHNSON WAX PAVILION")
+        time.sleep(2)
+        jw_pav()
+    elif choice in right:
+        print("\nYOU ARE AT THE AUSTRIA PAVILION")
+        time.sleep(2)
+        austria_pav()
+    else:
+        print("I didn't understand that.\n")
+        fairs1()
+
+
 # Fountain of the Planets
 def planets_foun(): 
 #    time = 10
-    print("")   
-
-
-
+    print("Of all the fountains at the fair, there are 11 of them,\nthe Fountain of the Planets is the largest.\nNot only is this fountain the largest at the fair,\nbut it is said to be the largest fountain in the world.\nYou watch as the water jets reach heights of 150 ft.")   
     time.sleep(2)
     print("Where would you like to go from here?")
     print("To the left is THE TOWER OF LIGHT PAVILION\nand to the right is THE FOUNTAIN OF THE FAIRS.")
@@ -1940,35 +1879,13 @@ def plan1():
         plan1()
 
 
-# Fountain of the Fairs
-def fairs_foun():
-#    time = 10
-    print("As you take in the pavilions around the fountain,\nyou notice a man wearing a white suit holding numerous blueprints.\nThere are a few men around him and they are all pointing\nto something on one of the blueprints that is opened up.\nBehind and around the group of men there are numerous people huddled around them.")
-    moses()
-def fairs1():    
-    print("To the left is THE JOHNSON WAX PAVILION and to the right is THE AUSTRIA PAVILION.")
-    choice = input("Which way do you go?\nleft or right?\n ") 
-    if choice in left:
-        print("\nYOU ARE AT THE JOHNSON WAX PAVILION")
-        time.sleep(2)
-        jw_pav()
-    elif choice in right:
-        print("\nYOU ARE AT THE AUSTRIA PAVILION")
-        time.sleep(2)
-        austria_pav()
-    else:
-        print("I didn't understand that.\n")
-        fairs1()
-
-
 # Solar Fountain
 def solar_foun():    
 #    time = 10 
-    print("")
-    
-
+    print("The base of the fountain is a dome covered with dozen\nof circles for emitting light during the evening.\nThere is a sphere that is raised nearly 50 feet\nin the air, that appears to be floating,\nwith dozens of spikes that beam out around its circumference.\nWater shoots out from around the base of the dome,\nfrom the dome up to the sphere above it, as well as\nout of all the spikes of the sphere.")
     time.sleep(2)
-    print("Do you head left to THE AFRICAN PAVILION\nor right to THE GREECE PAVILION?")
+    print("After you soak up the fountain and rest your\nfeet you decide where to head to next.")
+    print("Do you head left to THE GUINEA PAVILION\nor right to THE AUSTRIA PAVILION?")
     sol1()
 def sol1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -1985,15 +1902,42 @@ def sol1():
         sol1()
 
 
+# Robert Moses
+def moses():
+#    time = 10
+    choice = input("Do you go to see who it is?\nyes or no?\n ") 
+    if choice in positive:
+        randint = random.randint(0,2)
+        if randint == 1: 
+            print("\nYou ask a couple kids who looks your age who the man is in the middle\nof the crowd and they tell you that they were trying to figure it out, as well.\n")
+            time.sleep(2)
+            print("After your attempt to learn a little about the important person\nin the white suit you decide where to go next.")
+            fairs1() 
+        elif randint == 2:
+            print("\nYou ask a white man who the figure in the middle of the crowd is\nand he says that he is Robert Moses, president of the fair\nand one of the most important men living today\ndue to the number of parks, highways and bridges\nhe was instrumental in creating throughout New York for the past 40 years.\n")
+            time.sleep(2)
+            print("After you learn a little about the fair's president you decide where to go next.")
+            fairs1()
+        elif randint == 3:
+            print("\nYou ask a black woman who the man in the middle of the crowd is\nand she says that he is Robert Moses, president of the fair\nand one of the most dispicable human beings due to the mistreatment\nof minority groups while he was the city's Department of Parks\ncommissioner as well as the Slum Clearance Committee\nchairman and City Construction coordinator.\n")
+            time.sleep(2)
+            print("After you learn a little about the fair's president you decide where to go next.")
+            fairs1() 
+    elif choice in negative:
+        print("Alright, let's go to the next pavilion.\n")
+        fairs1()
+    else:
+        print("I didn't understand that.\n")
+        moses()
+
+
 # Rocket Thrower Scuplture
 def rocket():
 #    time = 10
-    print("")   
-
-
+    print("The 43 foot tall artwork was made by Donald De Lue\nand depicts a balanced figure as he reaches toward a constellation.\nIn the figure's right hand is a small sphere that is being launched\ninto the sky through the constellations leaving a trail of flames.")   
     time.sleep(2)
     print("Where would you like to go from here?")
-    print("To the left is THE  PAVILION\nand to the right is THE  PAVILION.")
+    print("To the left is THE UNITED ARAB REPUBLIC PAVILION\nand to the right is THE LEBANON PAVILION.")
     rock1()
 def rock1():    
     choice = input("Which way do you go?\nleft or right?\n ") 
@@ -2019,8 +1963,8 @@ def light():
 # First decision
 def first(): 
     print("The site of people as well as strange and colorful buildings\nare in all directions near and as far as the eye can see.")
-    print("What do you want to see first?")
-    print("To your left you see THE EASTMAN KODAK PAVILION.")
+    print("Where do you want to go first?")
+    print("To your left is THE EASTMAN KODAK PAVILION")
     print("and to your right is THE PEPSI-COLA PAVILION.") 
     choice = input("Which way do you go?\nleft or right?\n ")    
     if choice in left:
@@ -2038,8 +1982,8 @@ def first():
 
 # Areas of the Fair
 def areas():    
-    print("You are now within the fair at the Court of the Five Boroughs.\nTo the left is the International Area and to the right is the Industrial Area.")
-    choice = input("Would you like to know more about the areas of the fair before you proceed?\nyes or no\n ")
+    print("You are now within the fair at the Court of the\nFive Boroughs in the Industrial Area of the fair.")
+    choice = input("Would you like to know more about the areas\nof the fair before you proceed?\nyes or no\n ")
     if choice in positive:
         print("\nThe areas of the fair are: Industrial, International,\nFederal and State, Transportation, Lake Amusement, and Flushing Bay.\n")
         print("The Industrial Area has 45 pavilions that showcases America's industry.\nThe International Area is represented by 80 nations in 37 pavilions.")
@@ -2047,10 +1991,10 @@ def areas():
         print("The Lake Amusement Area is the smallest section, but with the most variety.\nThe Flushing Bay Area is a place for seafarers and sports fans.\n")            
         first() 
     elif choice in negative:    
-        print("Of course, as you please.") 
+        print("Of course, as you please.\n") 
         first()  
     else: 
-        print("I didn't understand that.") 
+        print("I didn't understand that.\n") 
         areas() 
 
 
@@ -2061,7 +2005,8 @@ def pay(price):
     if gold <= 0:
         broke()
     else: 
-        print("\nYou now have $ ", gold + "")
+        print("\nYou now have $",gold)
+        print("")
         time.sleep(3)
 
 
@@ -2113,17 +2058,17 @@ def name():
     print("")
     print("Hello, " + name + "!")
 # how to store name to recall later?
-    print("After riding your bike around the neighborhood,")
-    print("you decide to see what all the excitement was about at the park\nand now you find yourself at a fence near the fairgrounds.")
+    print("After riding your bike around the neighborhood, you")
+    print("decide to see what all the excitement was about at the park\nand now you find yourself at a fence near the fairgrounds.")
     print("It looks like you can jump over it.\n")
     intro()
 def intro():
-    choice = input("Do you decide to sneak into the 1964-1965 World's Fair\nso you can keep your $2.80 in change for exhibits and snacks?\nyes or no\n ")
+    choice = input("Do you decide to sneak into the 1964-1965 World's Fair\nso you can save your $2.35 for exhibits and snacks?\nyes or no\n ")
     if choice in positive:
         print("")
-        print("     ----------------------------------------")
-        print("      WELCOME TO THE 1964-1965 WORLD'S FAIR!!")
-        print("     ----------------------------------------") 
+        print("        ----------------------------------------")
+        print("         WELCOME TO THE 1964-1965 WORLD'S FAIR!!")
+        print("        ----------------------------------------") 
         print("")       
         areas()
     elif choice in negative:
