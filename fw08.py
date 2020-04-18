@@ -1,4 +1,4 @@
-# fw07.py
+# fw08.py
 from sys import exit
 import time
 import random
